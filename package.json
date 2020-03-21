@@ -1,0 +1,25 @@
+{
+  "name": "express-burger-log",
+  "version": "1.0.0",
+  "description": "this uses node, express, and handlebars, as well as an orm to make an app about eating burgers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sean-93/node-express-burger-log.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sean-93/node-express-burger-log/issues"
+  },
+  "homepage": "https://github.com/Sean-93/node-express-burger-log#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.18.1",
+    "node": "^13.10.1"
+  }
+}
