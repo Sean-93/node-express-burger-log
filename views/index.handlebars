@@ -4,7 +4,7 @@
         <div class="card-deck">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Burgers to be Eaten</h5>
+                    <h5 class="card-title">{{titleLeft}}</h5>
                     <ul class="list-group">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             Beyond Burger
@@ -22,8 +22,22 @@
             </div>
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">EAT-DA-BOIGAH!</h5>
+                    <h5 class="card-title">
+
+                        {{#if titleCenter}}
+                        Time to {{titleCenter}}
+                        {{else}}
+                        Could not get "titleCenter"
+                        {{/if}}
+
+                        </h5>
                     <p class="card-text">Here is where you can input the name of a burger you want to eat.  I hope you are hungry because it is burger time!!!!
+                        {{#each timing}}
+                        <p>
+                            {{monday}},
+                            {{tuesday}}
+                        </p>
+                        {{/each}}
                     </p>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Add a tasty boiga!!!!"
@@ -36,7 +50,7 @@
             </div>
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Devoured Burgers</h5>
+                    <h5 class="card-title">{{titleRight}}</h5>
                     <ul class="list-group">
                         <li class="list-group-item">Steak Burger</li>
                         <li class="list-group-item">Turkey Burger</li>
