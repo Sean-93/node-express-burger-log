@@ -6,18 +6,16 @@
                 <div class="card-body">
                     <h5 class="card-title">{{titleLeft}}</h5>
                     <ul class="list-group">
+                        {{#each uneatenBurgers}}
+
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            Beyond Burger
-                            <button class="btn btn-danger">Devour it!</button>
+                            {{burger_name}}
+                            <button id="devour-button" data-id="{{ID}}" class="btn btn-danger">Devour it!</button>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            Bean Burger
-                            <button class="btn btn-danger">Devour it!</button>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            Hamburger
-                            <button class="btn btn-danger">Devour it!</button>
-                        </li>
+                        {{/each}}
+                    </ul>
+
+
                 </div>
             </div>
             <div class="card">
@@ -30,9 +28,10 @@
                         Could not get "titleCenter"
                         {{/if}}
 
-                        </h5>
-                    <p class="card-text">Here is where you can input the name of a burger you want to eat.  I hope you are hungry because it is burger time!!!!
-                        {{#each timing}}
+                    </h5>
+                    <p class="card-text">Here is where you can input the name of a burger you want to eat. I hope you
+                        are hungry because it is burger time!!!!
+                        {{#each burgers}}
                         <p>
                             {{monday}},
                             {{tuesday}}
@@ -40,11 +39,16 @@
                         {{/each}}
                     </p>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Add a tasty boiga!!!!"
-                            aria-label="Recipient's username" aria-describedby="button-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="button" id="button-addon2">Add</button>
-                        </div>
+                        <form id="burger-form">
+
+                            <input id="burger-input" name="burger-input" type="text" class="form-control"
+                                placeholder="Add a tasty boiga!!!!" aria-label="Recipient's username"
+                                aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit" id="button-addon2">Add</button>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
             </div>
@@ -52,11 +56,12 @@
                 <div class="card-body">
                     <h5 class="card-title">{{titleRight}}</h5>
                     <ul class="list-group">
-                        <li class="list-group-item">Steak Burger</li>
-                        <li class="list-group-item">Turkey Burger</li>
-                        <li class="list-group-item">Whatever Burger</li>
-                        <li class="list-group-item">Nightmare Burger</li>
-                        <li class="list-group-item">Secret Burger</li>
+                        {{#each devouredBurgers}}
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            {{burger_name}}
+                        </li>
+                        {{/each}}
                     </ul>
                 </div>
             </div>
